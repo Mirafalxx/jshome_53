@@ -6,6 +6,11 @@ const Todoitems = (props) => {
   //   return <li key={item.key}>{item.text}</li>;
   // };
 
+  // const removeItem = (id) => {
+  //   const newTodoList = todoList.filter((todo) => todo.id !== id);
+  //   setTodoList(newTodoList);
+  // };
+
   return (
     <div>
       <ul>
