@@ -13,8 +13,17 @@ const Todoform = () => {
         return [...todoList, item];
       });
       setTodo("");
+      console.log(todoList);
     } else alert("Please enter value");
   };
+
+
+  const removeItem = (id) => {
+    const newTodoList = todoList.filter((todo) => todo.id !== id);
+    setTodoList(newTodoList);
+    // console.log('123');
+  }
+
   return (
     <>
       <div className="todoForm" onSubmit={addNewTask}>
@@ -29,7 +38,15 @@ const Todoform = () => {
           <button>Add</button>
         </form>
       </div>
-      <Todoitems todoEntries={todoList} />
+      {todoList.map((todoItem) => {
+        const { id, todo } = todoItem;
+        return (
+          <div className='test'>
+            <Todoitems id={id} todo={todo} remove={() => removeItem(todoItem.id)} />
+          </div>
+        )
+      })}
+      {/* <Todoitems todoEntries={todoList} remove={() => removeItem(todoList.id)} /> */}
     </>
   );
 };
