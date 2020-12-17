@@ -1,13 +1,40 @@
 .App {
   text-align: center;
 }
-.todoItems li{
+.todo {
+  margin-top: 90px;
+  /* margin-left: 0px; */
+}
+input {
+  margin-right: 40px;
+  padding: 7px;
+}
+.todoForm {
+  /* margin-top: 250px; */
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.58);
+}
+.todoItems {
+  display: flex;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.btn {
+  padding: 7px 32px;
+}
+.todoItems li {
   display: flex;
   justify-content: center;
   align-items: center;
- }
-
- .removeItem:hover{
-   cursor: pointer;
-   fill: red;
- }
+}
+.removeItem:hover {
+  cursor: pointer;
+  fill: red;
+}

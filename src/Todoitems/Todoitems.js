@@ -1,13 +1,15 @@
 import React from "react";
 
 const Todoitems = (props) => {
-
   return (
-    <div className='todoItems'>
+    <div className="todoItems" key={props.id}>
       <ul>
-        <li key={props.id} >
+        <li>
+          <input type="checkbox" />
           {props.todo}
-          <p className='removeItem' onClick={props.remove}>&times;</p>
+          <p className="removeItem" onClick={props.remove}>
+            &times;
+          </p>
         </li>
       </ul>
     </div>
