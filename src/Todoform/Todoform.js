@@ -4,6 +4,7 @@ import Todoitems from "../Todoitems/Todoitems";
 const Todoform = () => {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState([]);
+  const [showTodoList, setShowTodoList] = useState(false);
 
   const addNewTask = (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ const Todoform = () => {
       setTodoList((todoList) => {
         return [...todoList, item];
       });
+      setShowTodoList(true)
       setTodo("");
       // console.log(todoList);
     } else alert("Please enter value");
@@ -38,6 +40,8 @@ const Todoform = () => {
         </form>
       </div>
 
+
+
       {todoList.map((todoItem) => {
         const { id, todo } = todoItem;
         return (
@@ -50,6 +54,9 @@ const Todoform = () => {
           </div>
         );
       })}
+
+
+
     </>
   );
 };

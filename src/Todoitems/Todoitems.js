@@ -5,7 +5,7 @@ const Todoitems = (props) => {
     <div className="todoItems" key={props.id}>
       <ul>
         <li>
-          <input type="checkbox" />
+          {/* <input type="checkbox" /> */}
           {props.todo}
           <p className="removeItem" onClick={props.remove}>
             &times;

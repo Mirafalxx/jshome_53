@@ -19,12 +19,21 @@ input {
   border-radius: 5px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.58);
 }
+.test{
+  /* margin-top: 300px; */
+  width: 100%;
+  max-width: 390px;
+  height: 90px;
+  margin: 0 auto;
+  border:1px solid #000;
+}
 .todoItems {
   display: flex;
   width: 100%;
   max-width: 390px;
   margin: 0 auto;
   text-decoration: none;
+  margin-bottom: 300px;
 }
 .btn {
   padding: 7px 32px;
